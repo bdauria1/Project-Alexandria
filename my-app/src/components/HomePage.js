@@ -23,8 +23,8 @@ const HomePage = () => {
         </nav>
       </header>
       <section className="hero-section">
-        <h2>Find the Perfect Freelancer</h2>
-        <p>Get your work done by talented freelancers from around the world.</p>
+        <h2>Find the Perfect Mentor</h2>
+        <p>Get advice from top notch profesionals in the desired field.</p>
         <Link to="/login">Join Now</Link> {/* Replace the button with a link */}
       </section>
       <section className="featured-services">
