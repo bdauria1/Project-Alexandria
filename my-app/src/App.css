@@ -1,44 +1,44 @@
-/* styles.css */
 
-/* Reset default margin and padding */
 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  background-image: url("C:/Users/Brand/OneDrive/Documents/GitHub/Project-Alexandria/my-app/src/components/img/photo-1571260899304-425eee4c7efc.avif");
+  background-repeat: no-repeat;
+  background-position: top left, top right;
+  background-size: cover;
+  height: 100%;
   margin: 0;
   padding: 0;
 }
 
-/* Set global box-sizing */
-html {
-  box-sizing: border-box;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
-/* Basic styles */
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.5;
-  background-color: #f2f2f2;
-  color: #333;
-}
-
-.container {
-  max-width: 960px;
-  margin: 0 auto;
+footer{
+  margin-top: auto;
   padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  font-size: 14px;
 }
 
 header {
-  background-color: #fff;
-  padding: 10px 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  padding: 20px;
 }
 
 nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end; 
+  color: #fff;
+  padding: 10px;
+  margin-left: auto;
 }
 
 nav h1 {
@@ -52,12 +52,59 @@ nav ul {
 }
 
 nav ul li {
-  margin-right: 15px;
-  cursor: pointer;
+  margin-left: 15px;
+}
+
+nav ul li:first-child {
+  margin-left: 0;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ccc;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  width: 100%; 
+}
+
+.logo {
+  width: 400px; 
+  height: 300px; 
+  border-radius: 50%;
+}
+
+/* HomePage styling*/
+.homepage {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .hero-section {
-  background-color: #f9f9f9;
+  position: relative;
   padding: 50px;
   text-align: center;
 }
@@ -72,66 +119,278 @@ nav ul li {
   margin-bottom: 30px;
 }
 
-.featured-services {
-  margin-top: 50px;
+.hero-section .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
-.service-card {
-  background-color: #fff;
+.join-now-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.join-now-link:hover {
+  background-color: #555;
+}
+
+.join-now-link:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px #fff, 0 0 0 6px #333;
+}
+
+/* LoginPage styling */
+.login-page {
+  font-family: Arial, sans-serif;
+  width: 600px; 
+  height: 350px; 
+  margin: 0 auto;
   padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form-group {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+button.login-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.login-button:hover {
+  background-color: #555;
+}
+
+p.signup-link {
+  text-align: center;
+  margin-top: 10px;
+}
+
+p.signup-link a {
+  color: #333;
+  text-decoration: underline;
+}
+
+p.signup-link a:hover {
+  color: #555;
+}
+
+/* SignupPage styling */
+.signup-page {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: Arial, sans-serif;
+  width: 600px; 
+  height: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.input-field {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.signup-page h1 {
+  text-align: center;
   margin-bottom: 20px;
 }
 
-.service-card img {
-  width: 100%;
-  max-height: 200px;
-  object-fit: cover;
+.signup-page form {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-page input {
+  padding: 10px;
   margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-.service-card h3 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.service-card p {
-  font-size: 16px;
-  color: #777;
-}
-
-footer {
+.signup-page button {
+  padding: 10px;
   background-color: #333;
   color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.signup-page button:hover {
+  background-color: #555;
+}
+
+/* HubPage styling */
+.hub-page {
+  font-family: Arial, sans-serif;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hub-page h1 {
   text-align: center;
-  padding: 10px 0;
+  margin-bottom: 20px;
 }
 
-footer p {
-  font-size: 14px;
+.hub-page p {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-/* Media queries for responsiveness */
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+.hub-page ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
 
-  nav ul li {
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
+.hub-page li {
+  margin-bottom: 10px;
+}
 
-  .hero-section h2 {
-    font-size: 28px;
-  }
+.hub-page li a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
 
-  .hero-section p {
-    font-size: 16px;
-  }
+.hub-page li a:hover {
+  color: #555;
+}
 
-  .service-card {
-    width: 100%;
-  }
+/* ChatPage styling */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: flex-end;
+  height: 100vh;
+}
+
+.chat-messages {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: scroll;
+}
+
+.message {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  max-width: 70%;
+}
+
+.user-message {
+  background-color: #007bff;
+  color: #fff;
+  align-self: flex-end;
+}
+
+.ai-message {
+  background-color: #f8f9fa;
+  color: #212529;
+  align-self: flex-start;
+}
+
+.chat-input {
+  width: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 10px;
+  margin-left: auto;
+}
+
+.chat-input input {
+  flex-grow: 4;
+  margin-right: 10px;
+  padding: 5px;
+  border: none;
+  border-radius: 3px;
+}
+
+.chat-input button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 3px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.chat-messages {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: scroll;
+  overflow-x: hidden; /* Hide the horizontal scrollbar */
+}
+
+/* Add the following CSS to customize the scrollbar appearance */
+.chat-messages::-webkit-scrollbar {
+  width: 6px; /* Width of the scrollbar */
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+  background-color: #ccc; /* Color of the scrollbar thumb */
+  border-radius: 3px; /* Rounded corners of the scrollbar thumb */
+}
+
+.chat-messages::-webkit-scrollbar-track {
+  background-color: transparent; 
+}
+
+.contacts-container {
+  width: 21%;
+  height: 100%;
+  border-radius: 5%;
+  display: flex;
+  justify-content: flex-start;
+  background-color: #fff; /* Set background color to white */
+  padding: 20px;
+}
+
+.contacts-box {
+  height: 100%;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }

@@ -1,19 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logo from './img/Project_Alexandria_LOGO.PNG';
+
 
 const HomePage = () => {
   const handleLogin = () => {
-    // Add login logic here
     console.log('Login clicked');
-    // Redirect to the login page
-    // You can use the history object or a routing library for navigation
   };
 
   return (
     <div className="homepage">
       <header>
         <nav>
-          <h1>Alexandria</h1>
           <ul>
             <li><Link to="/categories">Categories</Link></li>
             <li><Link to="/services">Services</Link></li>
@@ -23,20 +21,15 @@ const HomePage = () => {
         </nav>
       </header>
       <section className="hero-section">
+        <div className="background-overlay"></div>
+        <Link to="/">
+            <img src={logo} alt="Alexandria Logo" className="logo" />
+        </Link>
         <h2>Find the Perfect Mentor</h2>
-        <p>Get advice from top notch profesionals in the desired field.</p>
-        <Link to="/login">Join Now</Link> {/* Replace the button with a link */}
+        <p>Get advice from top-notch professionals in the desired field.</p>
+        <Link to="/login" className="join-now-link">Join Now</Link>
       </section>
-      <section className="featured-services">
-        <h2>Featured Services</h2>
-        <div className="service-card">
-          <img src="service-image.jpg" alt="Service" />
-          <h3>Service Title</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-        {/* Repeat the service-card component for other featured services */}
-      </section>
-      <footer>
+      <footer className="footer-bottom">
         <p>&copy; 2023 Alexandria. All rights reserved.</p>
       </footer>
     </div>

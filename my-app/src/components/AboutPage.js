@@ -1,8 +1,20 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const AboutPage = () => {
   return (
+    
     <div className="about-page">
+      <header>
+        <nav>
+          <ul>
+            <li><Link to="/categories">Categories</Link></li>
+            <li><Link to="/services">Services</Link></li>
+            <li><Link to="/about">About</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
+          </ul>
+        </nav>
+      </header>
       <h1>About Me</h1>
       <div className="about-content">
         <img src="profile-picture.jpg" alt="Profile" className="profile-picture" />
