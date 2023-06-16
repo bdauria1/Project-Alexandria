@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import welcomeimage from './img/HEADER.png';
 
 const ChatPage = () => {
   const [chats, setChats] = useState([]);
@@ -30,7 +31,7 @@ const ChatPage = () => {
     <div className="chat-container">
       <div className="chat-page">
         <div className="chat-sidebar">
-          <h2>New Chats</h2>
+          <h2>+ New Chat</h2>
           <ul className="chat-list">
             {chats.map((chat) => (
               <li key={chat.id}>
@@ -42,6 +43,9 @@ const ChatPage = () => {
         <div className="chat-content">
           {/* Render the chat content based on the selected chat */}
           {/* Example: <ChatContent chatId={selectedChatId} /> */}
+        </div>
+        <div className="welcome-image">
+            <img src={welcomeimage} className="welcomelogo"/>
         </div>
         <form className="user-input" onSubmit={handleUserSubmit}>
           <div className="input-container">
