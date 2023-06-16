@@ -8,7 +8,6 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.5;
-  background-image: url("C:/Users/Brand/OneDrive/Documents/GitHub/Project-Alexandria/my-app/src/components/img/photo-1571260899304-425eee4c7efc.avif");
   background-repeat: no-repeat;
   background-position: top left, top right;
   background-size: cover;
@@ -298,7 +297,8 @@ p.signup-link a:hover {
 }
 
 /* ChatPage styling */
-.chat-container {
+.chat-page {
+  background-color: rgb(217, 217, 217);
   display: flex;
   flex-direction: column;
   align-items: left;
@@ -306,91 +306,49 @@ p.signup-link a:hover {
   height: 100vh;
 }
 
-.chat-messages {
-  flex-grow: 1;
-  padding: 20px;
-  overflow-y: scroll;
+.chat-page {
+  display: flex;
 }
 
-.message {
-  padding: 10px;
+.chat-sidebar {
+  height: 100%;
+  width: 300px;
+  background-color: rgb(129, 129, 129);
+  padding: 20px;
+}
+
+.chat-sidebar h2 {
   margin-bottom: 10px;
-  border-radius: 5px;
-  max-width: 70%;
 }
 
-.user-message {
-  background-color: #007bff;
-  color: #fff;
-  align-self: flex-end;
+.chat-list {
+  list-style-type: none;
+  padding: 0;
 }
 
-.ai-message {
-  background-color: #f8f9fa;
-  color: #212529;
-  align-self: flex-start;
+.chat-list li {
+  margin-bottom: 10px;
 }
 
-.chat-input {
-  width: 75%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 10px;
-  margin-left: auto;
+.chat-list li a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
-.chat-input input {
-  flex-grow: 4;
-  margin-right: 10px;
-  padding: 5px;
-  border: none;
-  border-radius: 3px;
+.chat-list li a:hover {
+  background-color: #ddd;
 }
 
-.chat-input button {
-  padding: 8px 15px;
-  border: none;
-  border-radius: 3px;
-  background-color: #007bff;
-  color: #fff;
-  cursor: pointer;
-}
-
-.chat-messages {
+.chat-content {
   flex-grow: 1;
   padding: 20px;
-  overflow-y: scroll;
-  overflow-x: hidden; /* Hide the horizontal scrollbar */
+  background-color: rgb(217, 217, 217);
 }
 
-/* Add the following CSS to customize the scrollbar appearance */
-.chat-messages::-webkit-scrollbar {
-  width: 6px; /* Width of the scrollbar */
-}
 
-.chat-messages::-webkit-scrollbar-thumb {
-  background-color: #ccc; /* Color of the scrollbar thumb */
-  border-radius: 3px; /* Rounded corners of the scrollbar thumb */
-}
 
-.chat-messages::-webkit-scrollbar-track {
-  background-color: transparent; 
-}
 
-.contacts-container {
-  width: 21%;
-  height: 100%;
-  border-radius: 5%;
-  display: flex;
-  justify-content: flex-start;
-  background-color: #fff; /* Set background color to white */
-  padding: 20px;
-}
-
-.contacts-box {
-  height: 100%;
-  background-color: white;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
