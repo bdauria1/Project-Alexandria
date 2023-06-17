@@ -3,9 +3,10 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HomePage from './components/HomePage';
 import AboutPage from './components/AboutPage';
 import SignupPage from './components/SignupPage';
-import LoginPage from './components/LoginPage'; // Import the LoginPage component
+import LoginPage from './components/LoginPage';
 import HubPage from './components/HubPage';
 import ChatPage from './components/ChatPage';
+import ChatResponse from './components/ChatResponse';
 import './App.css';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/hub" element={<HubPage />} />
         <Route path="/chat" element={<ChatPage />} />
+        <Route path="/chatresponse" element={<ChatResponse />} />
       </Routes>
     </Router>
   );

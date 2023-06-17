@@ -48,15 +48,17 @@ const ChatPage = () => {
             <img src={welcomeimage} className="welcomelogo"/>
         </div>
         <form className="user-input" onSubmit={handleUserSubmit}>
-          <div className="input-container">
-            <input
-              type="text"
-              value={userInput}
-              onChange={handleUserInput}
-              placeholder="Type your question here"
-            />
-            <button type="submit">></button>
-          </div>
+            <div className="input-bar">
+                <div className="input-container">
+                    <input
+                    type="text"
+                    value={userInput}
+                    onChange={handleUserInput}
+                    placeholder="Type your question here"
+                    />
+                    <button type="submit"><Link to="/chatresponse">></Link></button>
+                </div>
+            </div>
         </form>
       </div>
     </div>
