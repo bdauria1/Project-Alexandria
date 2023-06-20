@@ -27,46 +27,29 @@ footer p {
 }
 
 header {
-  color: #fff;
   padding: 20px;
 }
 
 nav {
   display: flex;
   align-items: center;
-  justify-content: flex-end; 
-  color: #fff;
-  padding: 10px;
+  justify-content: space-between;
   margin-left: auto;
 }
 
-nav h1 {
-  font-size: 24px;
-  font-weight: bold;
+nav men a{
+  color: #1E56C9;
 }
 
-nav ul {
-  list-style: none;
+.welcome {
+  background-color: #1E56C9;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: auto;
 }
 
-nav ul li {
-  margin-left: 15px;
-}
 
-nav ul li:first-child {
-  margin-left: 0;
-}
-
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-  color: #ccc;
-}
 
 label {
   display: block;
@@ -102,50 +85,43 @@ form {
   min-height: 100vh;
 }
 
-.hero-section {
-  position: relative;
-  padding: 50px;
+.homepage h1 {
   text-align: center;
-}
-
-.hero-section h2 {
-  font-size: 36px;
   margin-bottom: 20px;
 }
 
-.hero-section p {
-  font-size: 18px;
-  margin-bottom: 30px;
-}
-
-.hero-section .btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #333;
+.b1{
+  background-color: #1E56C9;
   color: #fff;
-  text-decoration: none;
+  border: none;
   border-radius: 5px;
+  cursor: pointer;
   transition: background-color 0.3s ease;
+  padding: 10px;
+  margin: 10px;
 }
 
-.join-now-link {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #333;
+.b2{
+  background-color: #1E56C9;
   color: #fff;
-  text-decoration: none;
+  border: none;
   border-radius: 5px;
+  cursor: pointer;
   transition: background-color 0.3s ease;
+  padding: 10px;
+  margin: 10px;
 }
 
-.join-now-link:hover {
-  background-color: #555;
+.menu {
+  display: flex;
+  justify-content: space-between;
 }
 
-.join-now-link:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px #fff, 0 0 0 6px #333;
+.menu-item:last-child {
+  margin-left: auto;
 }
+
+
 
 /* LoginPage styling */
 .login-page {
