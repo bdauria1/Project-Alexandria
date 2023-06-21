@@ -17,12 +17,15 @@ body {
 }
 
 footer{
+  height: 300px;
+  background-color: black;
   margin-top: auto;
   padding: 20px;
   text-align: center;
 }
 
 footer p {
+  color: white;
   font-size: 14px;
 }
 
@@ -40,16 +43,6 @@ nav {
 nav men a{
   color: #1E56C9;
 }
-
-.welcome {
-  background-color: #1E56C9;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-left: auto;
-}
-
-
 
 label {
   display: block;
@@ -119,6 +112,51 @@ form {
 
 .menu-item:last-child {
   margin-left: auto;
+}
+
+.welcome {
+  background-color: #1E56C9;
+  width: 100%;
+  height: 400px;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: auto;
+}
+
+.tutorial{
+  background-color: #F5F5F5;
+  width: 100%;
+  height: 800px;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: auto;
+}
+
+.tutorialimage{
+  width: 800px; 
+  height: 600px; 
+}
+
+.questions{
+  background-color: white;
+  width: 100%;
+  height: 800px;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: auto;
+}
+
+.trapezoid {
+  width: 200px;
+  height: 0;
+  margin-left: 450px;
+  border-bottom: 50px solid black;
+  border-right: 40px solid transparent;
+}
+
+.trapezoid h2 {
+  color: white;
+  padding: 10px;
 }
 
 
